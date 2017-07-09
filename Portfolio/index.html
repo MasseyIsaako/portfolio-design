@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Massey Isa'ako Portfolio</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="images/tab.png" />
+
+		<!-- Viewport Used for Responsive Design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+		<!-- Meta Data -->
+		<meta name="Description" content="I am a creative, purpose driven junior web developer! Come and check out my portfolio for more about me!">
+
+		<meta name="Keywords" content="Portfolio, Massey Isa'ako">
+
+		<meta name="Author" content="Massey Isa'ako">
+	    
+		<!-- Connect to SASS Stylesheet (OOCSS Methodology) -->
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	     <!-- Font Awesome Icons -->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="nav-container">
+				<a href="#home"><img src="images/brandWhite.png" id="brand" alt="This is my logo."></a>
+				<i id="mobile-nav" class="fa fa-bars"></i>
+				<div id="desktop-nav">
+					<ul>
+						<li><a class="scrollChangeLink" href="#profile">PROFILE</a></li>
+						<li><a class="scrollChangeLink" href="#projects">PROJECTS</a></li>
+						<li><a class="scrollChangeLink" href="#skills">SKILLS</a></li>
+					</ul>
+				</div>
+				<div id="mobile-links">
+					<ul>
+						<li><a class="scrollChangeLink mobileScroller" href="#profile">PROFILE</a></li>
+						<li><a class="scrollChangeLink mobileScroller" href="#projects">PROJECTS</a></li>
+						<li><a class="scrollChangeLink mobileScroller" href="#skills">SKILLS</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Main Site Body -->
+			<div id="home" class="slide parallax" data-parallax="scroll" data-image-src="images/starry_night.jpg" data-z-index="1" data-speed="0.4">
+				<div id="text-container">
+					<h1>Massey Isaako</h1>
+					<h2> - Front End Web Designer - </h2>
+					<div id="resume"><a href="resume/massey_isaako.pdf" target="_blank">View Resume</a></div>
+				</div>
+				<div id="extraLinksBTN"><i id="openTAB" class="fa fa-plus" aria-hidden="true"></i></div>
+				<div id="extraLinksTAB">
+					<i class="fa fa-envelope contactMe" aria-hidden="true"></i>
+					<i class="fa fa-github contactMe" aria-hidden="true"></i>
+					<i class="fa fa-linkedin-square contactMe" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<!-- Main Site Body -->
+			<!-- Profile Slide -->
+			<div id="profile" class="slide">
+				<div id="face-container">
+					<img src="images/face.png" id="face">
+				</div>
+				<div id="hidden-text">
+					<h1 id="manipulate">Hello, is it me you're looking for?</h1>
+					<h2 id="secondHide"> - Lionel Richie</h2>
+				</div>
+				<h1>About Moi!</h1>
+				<hr>
+				<p>Hello there!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo erat tellus, sit amet euismod nisl interdum vel. Etiam id tortor luctus, maximus nisl nec, porttitor nisi. Nullam placerat bibendum justo non cursus. Ut mattis bibendum congue. Duis vel malesuada risus, ut ultrices nibh. Donec quis eleifend odio. Vestibulum placerat finibus ornare. Nullam placerat molestie ipsum nec condimentum. Mauris vel fermentum lectus, eget volutpat quam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo erat tellus, sit amet euismod nisl interdum vel. Etiam id tortor luctus, maximus nisl nec, porttitor nisi. Nullam placerat bibendum justo non cursus. Ut mattis bibendum congue. Duis vel malesuada risus, ut ultrices nibh. Donec quis eleifend odio. Vestibulum placerat finibus ornare. Nullam placerat molestie ipsum nec condimentum. Mauris vel fermentum lectus, eget volutpat quam.</p>
+			</div>
+
+			<!-- Projects Slide -->
+			<div id="projects" class="slide">
+				<div id="project-1" class="thumbnail-group">
+					<div class="overlay">
+						<h3>Wellington Waterfront</h3>
+						<div class="open-modal">View</div>
+					</div>
+				</div>
+				<div id="project-2" class="thumbnail-group">
+					<div class="overlay">
+						<h3>Whitcoulls Libraria</h3>
+						<div class="open-modal">View</div>
+					</div>
+				</div>
+				<div id="project-3" class="thumbnail-group">
+					<div class="overlay">
+						<h3>Card Generator</h3>
+						<div class="open-modal">View</div>
+					</div>
+				</div>
+				<div id="project-4" class="thumbnail-group">
+					<div class="overlay">
+						<h3>Google Maps API</h3>
+						<div class="open-modal">View</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Skills Slide -->
+			<div id="skills" class="slide blue"></div>
+
+			<!-- Modal Overlay -->
+			<div id="modal-fullscreen">
+				<div id="modal-container">
+					<i id="closeModal" class="fa fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Linking to Google Hosted jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Parrallax Scrolling -->
+		<script type="text/javascript" src="js/parallax/parallax.min.js"></script>
+
+		<!-- My Javascript/jQuery File -->
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

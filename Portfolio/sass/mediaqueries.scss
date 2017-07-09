@@ -1,0 +1,52 @@
+// Desktop Screen Sizing
+@media only screen and (min-width:1200px){
+	#mobile-nav, #mobile-links{display:none !important;}
+
+	#desktop-nav{
+		display:block;
+
+		li{
+			margin-right:5px;
+		}
+	}
+}
+
+// Sizing for the resume button
+@media only screen and(max-width:1390px){
+	#resume{
+		width:25% !important;
+		margin-left:37.5% !important;
+	}
+}
+
+// Tablet Screen Sizing
+@media only screen and (min-width:769px) and (max-width:1199px){
+	#mobile-nav, #mobile-links{display:none !important;}
+
+	#desktop-nav{
+		display:block;
+
+		li{
+			margin-right:5px;
+		}
+	}
+}
+
+// Mobile Screen Sizing
+@media only screen and (max-width:768px){
+	#home{
+		padding-top:20px;
+		background-position:bottom;
+		
+		h1{
+			font-size:25px !important;
+			margin-top:200px !important;
+		}
+
+		h2{font-size:20px !important;}
+	}
+
+	.mobile-nav{display:block !important;}
+
+	#desktop-nav{display:none !important;}
+}

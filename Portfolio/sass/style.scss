@@ -1,0 +1,434 @@
+// Importing Mediaqueries
+@import "mediaqueries.scss";
+
+// Importing Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+
+// Setting Variables
+$stretch:100%;
+$null:0px;
+
+// Mixins
+
+// Setting background Image to Fixed
+@mixin backgroundIMG{
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+// Centering Text on screen
+@mixin centerText{
+	width:$stretch;
+	text-align:center;
+}
+
+// Setting fonts
+@mixin MontFont{font-family: 'Montserrat', sans-serif;}
+
+@mixin Cinzel{font-family: 'Cinzel', serif;}
+
+// Transition Timing
+@mixin timing{
+	transition:0.2s ease;
+}
+
+// Default
+body,html{
+	padding:$null;
+	margin:$null;
+}
+
+*{
+	float:left;
+	box-sizing:border-box;
+}
+
+a{
+	text-decoration:none;
+}
+
+hr{
+	width:50%;
+	margin-left:25%;
+	padding:$null;
+	border:none;
+	border-top:medium double #333;
+	color:#333;
+	text-align:center;
+
+	&:after{
+		content:"||";
+		display:inline-block;
+		position:relative;
+		top:-0.7em;
+		font-size:1.5em;
+		padding:$null 0.25em;
+		background:#FFF;
+		border-radius: 0px;
+	}
+}
+
+// Main Container
+#wrapper{
+	position:absolute;
+	width:$stretch;
+	height:$stretch;
+}
+
+// Navigation Styling
+#nav-container{
+	position:fixed;
+	width:$stretch;
+	height:75px;
+	background:none;
+	box-shadow:none;
+	padding:0px;
+	z-index:10;
+	@include MontFont;
+	@include timing;
+
+	i{
+		color:#fff;
+		font-size:15pt;
+		z-index:1;
+		margin-top:25px;
+		margin-right:20px;
+		float:right;
+	}
+
+	a{
+		color:#FFF;
+		@include timing;
+
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+
+	#brand{
+		width:50px;
+		margin:10px 0px 10px 10px;
+		cursor:pointer;
+	}
+
+	#desktop-nav{
+		width:auto;
+		height:$stretch;
+		position:relative;
+		float:right;
+		margin-right:10px;
+		padding-top:7.5px;
+
+		ul{
+			text-decoration:none;
+			list-style-type:none;
+			padding:0px;
+			color:#fff;
+
+			li{
+				padding-left:100px;
+				padding-right:10px;
+				font-size:16px;
+			}
+		}
+	}
+
+	#mobile-nav{
+		cursor:pointer;
+	}
+
+	#mobile-links{
+		width:$stretch;
+		height:auto;
+		padding:5px;
+		position:relative;
+		margin:0px;
+		display:none;
+		background-color:rgba(0, 0, 0, 1);
+
+		ul{
+			text-decoration:none;
+			list-style-type:none;
+			padding:0px;
+			color:#fff;
+
+			li{
+				padding:10px;
+				padding-left:10px;
+				font-size:16px;
+				width:$stretch;
+			}
+			a{color:#fff;}
+		}
+	}
+}
+
+#home{
+	width:$stretch;
+	height:$stretch !important;
+}
+
+
+#text-container{
+	display:block;
+	width:$stretch;
+	height:auto;
+	position:relative;
+	z-index:2;
+
+	h1{
+		color:#fff;
+		@include centerText;
+		margin-top:300px;
+		font-size:45px;
+		font-weight:bold;
+		letter-spacing:10px;
+		z-index:1;
+	}
+
+	h2{
+		font-size:30px;
+		@include centerText;
+		margin:0px;
+		color:#fff;
+	}
+
+	#resume{
+		@include timing;
+
+		a{
+			@include centerText;
+			color:#000;
+		}
+
+		width:10%;
+		margin-left:45%;
+		height:auto;
+		padding:15px;
+		margin-top:50px;
+		font-weight:700;
+		font-size:12pt;
+		outline:none;
+		background:rgba(255,255,255,1);
+		border: solid 1px #fff;
+		border-radius:5px;
+
+		&:hover{
+			cursor:pointer;
+			border-color:#000;
+		}
+	}
+}
+
+// Scroll to next slide
+#extraLinksBTN{
+	@include timing;
+	position:fixed;
+	float:right;
+	bottom:$null;
+	right:$null;
+	width:50px;
+	height:50px;
+	background-color:#FFF;
+	border:solid 1px #FFF;
+	border-radius:5px;
+	z-index:3;
+	margin:10px;
+	cursor:pointer;
+
+	&:hover{border-color:#000;}
+
+	i{
+		font-size:20px;
+		margin-top:13px;
+		color:#000;
+		@include centerText;
+	}
+}
+
+#extraLinksTAB{
+	position:fixed;
+	bottom:$null;
+	right:$null;
+	width:$null;
+	width:200px;
+	margin:10px;
+	margin-right:70px;
+	height:50px;
+	background-color:rgb(255,255,255);
+	border-radius:5px;
+	border:solid 1px #000;
+	z-index:2;
+
+	i{cursor:pointer;}
+
+	.fa{
+		font-size:20px;
+		margin-top:13px;
+		color:#000;
+		width:33.3%;
+		text-align:center;
+	}
+}
+
+// Default Slides
+.slide{
+	width:$stretch;
+	height:auto;
+	@include Cinzel;
+	background:transparent;
+}
+
+// Individual styling of slides using unique ID
+#profile{
+	padding-bottom:100px;
+
+	#face-container{
+		width:$stretch;
+		height:auto;
+		margin-top:50px;
+
+		#face{
+			width:15%;
+			height:auto;
+			margin-left:42.5%;
+			cursor:pointer;
+		}
+	}
+
+	#hidden-text{
+		display:none;
+		height:auto;
+		width:$stretch;
+	}
+
+	h1, h2, p{
+		@include centerText;
+	}
+
+	p{
+		font-size:20px;
+		width:50%;
+		margin-left:25%;
+		text-align:left;
+	}
+}
+
+// Video Container
+#vid-container{
+	min-width:$stretch;
+	min-height:$stretch;
+	position:relative;
+	z-index:1;
+	filter:blur(1px);
+}
+
+// Video Overlay
+#vid-overlay{
+	position:absolute;
+	background-color:rgba(0,0,0,0.5);
+	width:$stretch;
+	height:106.5%;
+	z-index:2;
+}
+
+#project-1{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+}
+
+#project-2{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+}
+
+#project-3{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+}
+
+#project-4{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+}
+
+
+.thumbnail-group{
+	position:relative;
+	width:25%;
+	border:solid 1px white;
+	height:275px;
+	@include MontFont;
+	color:#FFF;
+
+	.overlay{
+		width:$stretch;
+		height:$stretch;
+		background-color:rgba(0,0,0,0);
+		opacity:0;
+		@include timing;
+
+		&:hover{
+			background-color:rgba(0,0,0,0.8);
+			opacity:1;
+		}
+
+		h3{
+			@include centerText;
+			margin-top:75px;
+		}
+
+		.open-modal{
+			position:absolute;
+			display:block;
+			left:50%;
+			top:65%;
+			transform:translate(-50%, -50%);
+			padding:10px 20px;
+			border:1px solid #FFF;
+			background-color:rgba(0,0,0,0);
+			cursor:pointer;
+		}
+	}
+}
+
+#modal-fullscreen{
+	display:none;
+	position:fixed;
+	z-index:15;
+	width:$stretch;
+	height:$stretch;
+	background-color:rgba(0,0,0,0.8);
+
+	#modal-container{
+		position:absolute;
+		width:50%;
+		height:90%;
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		background-color:#FFF;
+		z-index:16;
+
+		#closeModal{
+			float:right;
+			right:$null;
+			top:$null;
+			margin:10px;
+			cursor:pointer;
+		}
+	}
+}
+
+.blue{background:blue;}
+
+// greg rakozy
+// http://grakozy.com/
