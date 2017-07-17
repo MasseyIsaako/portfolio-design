@@ -1,0 +1,22 @@
+{
+	"projects": [
+		{
+			"name": "Wellington Waterfront",
+			"image": "",
+			"purpose": "Lorem Ipsum",
+			"link": "http://massey.isaako.yoobee.net.nz/Module_1/formative_3/index.html"
+		},
+		{
+			"name": "Whitcoulls Libraria",
+			"image": "",
+			"purpose": "Lorem Ipsum",
+			"link": "http://massey.isaako.yoobee.net.nz/Module_1/uxsummative_libraria/index.html"
+		},
+		{
+			"name": "Traverse",
+			"image": "",
+			"purpose": "Lorem Ipsum",
+			"link": "https://masseyisaako.github.io/Tourism-App/"
+		}
+	]
+}

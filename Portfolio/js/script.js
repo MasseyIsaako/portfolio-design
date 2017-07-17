@@ -1,5 +1,33 @@
+var projectInfo = [
+	{
+		name: "Wellington Waterfront",
+		image: "",
+		text: "",
+		url: ""
+	},
+	{
+		name: "Whitcoulls Libraria",
+		image: "",
+		text: "",
+		url: ""
+	},
+	{
+		name: "Card Generator",
+		image: "",
+		text: "",
+		url: ""
+	},
+	{
+		name: "Traverse",
+		image: "",
+		text: "",
+		url: ""
+	}
+];
+
 $(document).ready(function(){
 	// Setting some global variables
+	var navContainer = $("#nav-container");
 	var navOpen = false;
 	var openTAB = $("#openTAB");
 	var tabLinks = $("#extraLinksTAB");
@@ -46,7 +74,6 @@ $(document).ready(function(){
 	});
 
 	// Change navigation color on scroll
-	var navContainer = $("#nav-container");
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();		
 		if (scroll > ($("#home").height() - 75)) {
@@ -101,26 +128,31 @@ $(document).ready(function(){
 		}
 	});
 
-	// Face interaction
-	var faceClick = 0
-	$("#face").click(function(){
-		faceClick += 1
-		if(faceClick === 10){
-			$("#hidden-text").fadeIn(1000);
-			console.log("Ah! I feel better already :)");
-			$("#hidden-text").delay(5000).fadeOut(1000);
-		}
-	});
+	// // Filling in popup modal content with information about projects.
+	// thumbnail.click(function(){
+	// 	// var selection = $(this)[0].parentNode.childNodes[1].innerText;
+	// 	var headingText = $("#modal-content")[0].childNodes[1];
+	// 	var image = $("#modal-content")[0].childNodes[5].childNodes[0];
+	// 	// console.log(selection);
+	// 	console.log(headingText);
 
-	// Filling in popup modal content with information about projects.
-	thumbnail.click(function(){
-			modal.fadeIn("fast");
-		});
+	// 	for (var i = 0; i < projectInfo.length; i++) {
+	// 		if (headingText.innerText === projectInfo[i].name){
+	// 			console.log("Match");
+	// 			headingText.innerText = projectInfo[i].name;
+	// 		}
+
+	// 		// if (selection === projectInfo[i].name){
+	// 		// 	console.log("Match");
+	// 		// 	console.log(selection + " " + " " + projectInfo[i].name);
+	// 		// }
+	// 	}
+
+	// 	image.src = "images/wellington-waterfront.png";
+	// 	modal.fadeIn("fast");
+	// });
 
 	$("#closeModal").click(function(){
 		modal.fadeOut("fast");
 	});
 });
-
-console.log("My face is feeling a little itchy.");
-console.log("Could you give it a few clicks?");
