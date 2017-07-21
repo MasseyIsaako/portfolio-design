@@ -2,26 +2,37 @@ var projectInfo = [
 	{
 		name: "Wellington Waterfront",
 		image: "",
-		text: "",
-		url: ""
+		text: "Wellington city contains a variety of unique and"+
+		" interesting places and spaces. Each with its own"+
+		" community and culture, history, traditions, symbols,"+
+		" language, values and beliefs.<br><br>We needed to design a"+
+		" responsive website for an existing space in Wellington city where users"+
+		" can see what it is about. ",
+		url: "https://massey.isaako.yoobee.net.nz/Module_1/formative_3/index.html"
 	},
 	{
 		name: "Whitcoulls Libraria",
 		image: "",
-		text: "",
-		url: ""
-	},
-	{
-		name: "Card Generator",
-		image: "",
-		text: "",
-		url: ""
+		text: "Whitcoulls was testing the feasibility of a new service that connects"+
+		" owners with borrowers.<br><br>Owners of books can list"+
+		" them online for borrowers to access. Borrowers browse and"+
+		" search for items.<br><br>Users will rate each other as"+
+		" a method of maintaining positive interactions and"+
+		" encouraging a healthy and vibrant online community.<br><br>"+
+		" The service can be accessed in browsers from desktops,"+
+		" tablets and phones.<br><br><i>Note: Listing items and browsing is not functional</i>",
+		url: "https://massey.isaako.yoobee.net.nz/Module_1/uxsummative_libraria/index.html"
 	},
 	{
 		name: "Traverse",
 		image: "",
-		text: "",
-		url: ""
+		text: "Tourism New Zealand works with the tourism industry"+
+		" to positively promote New Zealand internationally. They have"+
+		" initiated a new campaign aimed at tourists visiting for short"+
+		" periods of time.<br><br>This is a single page web application"+
+		" allowing users to input information and provide meanigful feedback"+
+		" based on their input.",
+		url: "https://masseyisaako.github.io/Tourism-App/"
 	}
 ];
 
@@ -128,29 +139,27 @@ $(document).ready(function(){
 		}
 	});
 
-	// // Filling in popup modal content with information about projects.
-	// thumbnail.click(function(){
-	// 	// var selection = $(this)[0].parentNode.childNodes[1].innerText;
-	// 	var headingText = $("#modal-content")[0].childNodes[1];
-	// 	var image = $("#modal-content")[0].childNodes[5].childNodes[0];
-	// 	// console.log(selection);
-	// 	console.log(headingText);
+	// Filling in popup modal content with information about projects.
+	thumbnail.click(function(){
+		var selection = $(this)[0].parentNode.childNodes[1].innerText;
+		var headingText = $("#modal-content")[0].childNodes[1];
+		var bodyText = $("#modal-body-text")[0];
+		var image = $("#modal-content")[0].childNodes[5].childNodes[0];
+		var link = $("#live-site-link")[0];
 
-	// 	for (var i = 0; i < projectInfo.length; i++) {
-	// 		if (headingText.innerText === projectInfo[i].name){
-	// 			console.log("Match");
-	// 			headingText.innerText = projectInfo[i].name;
-	// 		}
+		for (var i = 0; i < projectInfo.length; i++) {
+			if(selection === projectInfo[i].name){
+				headingText.innerText = projectInfo[i].name;
+				bodyText.innerHTML = projectInfo[i].text;
+				link.href = projectInfo[i].url;
+			}
+		}
 
-	// 		// if (selection === projectInfo[i].name){
-	// 		// 	console.log("Match");
-	// 		// 	console.log(selection + " " + " " + projectInfo[i].name);
-	// 		// }
-	// 	}
+		console.log(link.href);
 
-	// 	image.src = "images/wellington-waterfront.png";
-	// 	modal.fadeIn("fast");
-	// });
+		image.src = "images/wellington-waterfront.png";
+		modal.fadeIn("fast");
+	});
 
 	$("#closeModal").click(function(){
 		modal.fadeOut("fast");

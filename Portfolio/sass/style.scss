@@ -7,6 +7,9 @@
 // Setting Variables
 $stretch:100%;
 $null:0px;
+$primary:#FFFFFF;
+$secondary:#333333;
+$accents:#062960;
 
 // Mixins
 
@@ -68,7 +71,7 @@ a{
 	@include timing;
 
 	i{
-		color:#fff;
+		color:$primary;
 		font-size:15pt;
 		z-index:1;
 		margin-top:25px;
@@ -77,7 +80,7 @@ a{
 	}
 
 	a{
-		color:#FFF;
+		color:$primary;
 		@include timing;
 
 		&:hover{
@@ -103,7 +106,7 @@ a{
 			text-decoration:none;
 			list-style-type:none;
 			padding:0px;
-			color:#fff;
+			color:$primary;
 
 			li{
 				padding-left:100px;
@@ -130,7 +133,7 @@ a{
 			text-decoration:none;
 			list-style-type:none;
 			padding:0px;
-			color:#fff;
+			color:$primary;
 
 			li{
 				padding:10px;
@@ -138,7 +141,7 @@ a{
 				font-size:16px;
 				width:$stretch;
 			}
-			a{color:#fff;}
+			a{color:$primary;}
 		}
 	}
 }
@@ -167,7 +170,7 @@ a{
 	z-index:2;
 
 	h1{
-		color:#fff;
+		color:$primary;
 		@include centerText;
 		margin-top:300px;
 		margin-bottom:$null;
@@ -182,7 +185,7 @@ a{
 		@include centerText;
 		font-weight:300;
 		margin:0px;
-		color:#fff;
+		color:$primary;
 	}
 
 	hr{
@@ -202,7 +205,7 @@ a{
 		a{
 			@include centerText;
 			font-weight:300;
-			color:#FFF;
+			color:$primary;
 		}
 
 		width:10%;
@@ -214,16 +217,16 @@ a{
 		font-size:12pt;
 		outline:none;
 		background:rgba(255,255,255,0);
-		border: solid 1px #fff;
+		border: solid 1px $primary;
 		border-radius:5px;
 
 		&:hover{
 			cursor:pointer;
-			background-color:#FFFFFF;
-			border-color:#333;
+			background-color:$primary;
+			border-color:$secondary;
 		}
 
-		&:hover a{color:#333333;}
+		&:hover a{color:$secondary;}
 	}
 }
 
@@ -246,7 +249,7 @@ a{
 		text-align:center;
 		width:5%;
 		margin:$null 47.5%;
-		color:#FFF;
+		color:$accents;
 	}
 }
 
@@ -259,8 +262,8 @@ a{
 	right:$null;
 	width:50px;
 	height:50px;
-	background-color:#FFF;
-	border:solid 1px #FFF;
+	background-color:$primary;
+	border:solid 1px $primary;
 	border-radius:5px;
 	z-index:3;
 	margin:10px;
@@ -310,11 +313,12 @@ a{
 // Individual styling of slides using unique ID
 #profile{
 	padding:100px $null;
-	background-color:#121212;
+	background-color:$primary !important;
+	color:$secondary;
 
 	h3, p{
 		@include centerText;
-		color:#FFFFFF;
+		color:$secondary;
 	}
 
 	p{
@@ -327,34 +331,41 @@ a{
 	.column{
 		width:23%;
 		margin:10px 5.16%;
-		border-radius:20px;
 		padding:20px;
-		background-color:transparent;
-		border:2px solid #FFFFFF;
-		color:#FFFFFF;
+		background-color:$primary;
+		border:2px solid $primary;
+		box-shadow:0px 0px 10px $secondary;
+		color:$primary;
 
 		i{
 			@include centerText;
 			font-size:150px;
+			color:$accents;
 		}
 
-		ul li{
-			@include centerText;
-			list-style-type:none;
-			font-size:16px;
+		ul{
+			width:$stretch;
+			padding:$null;
+			color:$secondary;
+
+			li{
+				@include centerText;
+				list-style-type:none;
+				font-size:16px;
+			}
 		}
 	}
 }
 
 // Projects Container
 #projects{
-	height:100vh;
-	padding:75px $null $null $null;
-	background-color:#000 !important;
+	height:auto;
+	padding:$null;
+	background-color:$accents !important;
 	overflow-y:hidden;
 
 	a{
-		color:#FFFFFF;
+		color:$primary;
 	}
 }
 
@@ -379,23 +390,15 @@ a{
 	background-position:bottom;
 }
 
-#project-4{
-	background-image:url("../images/starry_night.jpg");
-	@include backgroundIMG;
-	background-attachment:scroll;
-	background-position:bottom;
-}
-
 
 .thumbnail-group{
 	@include MontFont;
 	position:relative;
-	border:2px solid #FFFFFF;
-	border-top:50px solid #FFFFFF;
-	width:40%;
-	height:40%;
-	margin:2.4% 5%;
-	color:#FFF;
+	border:2px solid $primary;
+	width:33.3%;
+	height:300px;
+	margin:$null;
+	color:$primary;
 
 	&:hover{
 		background-size:150%;
@@ -404,7 +407,7 @@ a{
 	.fa{
 		top:-50px;
 		position:absolute;
-		color:#333;
+		color:$secondary;
 		transform:rotate(-25deg);
 	}
 
@@ -437,7 +440,7 @@ a{
 			top:65%;
 			transform:translate(-50%, -50%);
 			padding:10px 20px;
-			border:1px solid #FFF;
+			border:1px solid $primary;
 			background-color:rgba(0,0,0,0);
 			cursor:pointer;
 		}
@@ -464,7 +467,7 @@ a{
 		height:90%;
 		margin-left:25%;
 		margin-top:2.5%;
-		background-color:#FFF;
+		background-color:$primary;
 		z-index:16;
 
 		#close-container{
@@ -472,14 +475,14 @@ a{
 			position:absolute;
 			height:auto;
 			padding:10px;
-			background-color:#333;
+			background-color:$secondary;
 			z-index:2;
 
 			#closeModal{
 				@include centerText;
 				@include MontFont;
 				cursor:pointer;
-				color:#FFF;
+				color:$primary;
 			}
 		}
 
@@ -488,18 +491,19 @@ a{
 			position:absolute;
 			margin-top:39px;
 			width:$stretch;
-			height:90%;
+			height:94%;
 			padding:10px 30px;
 			overflow-y:scroll;
+			overflow-x:hidden;
 
-			h1{
+			h1, h3{
 				@include centerText;
 				margin-top:20px;
 			}
 
 			#img-box{
 				position:relative;
-				background:#FFFFFF;
+				background:$primary;
 				margin-left:50%;
 				margin-top:20px;
 				transform:translate(-50%, 0%);
@@ -522,7 +526,7 @@ a{
 			a{
 				position:relative;
 				margin-top:$null;
-				color:#FFFFFF;
+				color:$primary;
 			}
 
 			.project-url{
@@ -531,7 +535,7 @@ a{
 				font-size:20px;
 				font-weight:300;
 				padding:10px 12.5px;
-				background-color:#333;
+				background-color:$secondary;
 				width:30%;
 				margin:10px 35%;
 				text-align:center;
