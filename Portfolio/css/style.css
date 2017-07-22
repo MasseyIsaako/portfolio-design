@@ -1,18 +1,19 @@
 /*
 Error: Invalid CSS after "...iaqueries.scss"": expected "{", was ";"
-        on line 3 of C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss
+        on line 4 of C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss
 
 1: <<<<<<< HEAD
-2: // Importing Mediaqueries
-3: @import "mediaqueries.scss";
-4: 
-5: // Importing Google Fonts
-6: @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
-7: 
-8: // Setting Variables
+2: <<<<<<< HEAD
+3: // Importing Mediaqueries
+4: @import "mediaqueries.scss";
+5: 
+6: // Importing Google Fonts
+7: @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+8: 
+9: // Setting Variables
 
 Backtrace:
-C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss:3
+C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss:4
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
@@ -36,4 +37,4 @@ C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...iaqueries.scss\"\": expected \"{\", was \";\"\A         on line 3 of C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss\A \A 1: <<<<<<< HEAD\A 2: // Importing Mediaqueries\A 3: @import \"mediaqueries.scss\";\A 4: \A 5: // Importing Google Fonts\A 6: @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');\A 7: \A 8: // Setting Variables"; }
+  content: "Error: Invalid CSS after \"...iaqueries.scss\"\": expected \"{\", was \";\"\A         on line 4 of C:\Users\Tomasi\Documents\GitHub\portfolio-design\Portfolio\sass\style.scss\A \A 1: <<<<<<< HEAD\A 2: <<<<<<< HEAD\A 3: // Importing Mediaqueries\A 4: @import \"mediaqueries.scss\";\A 5: \A 6: // Importing Google Fonts\A 7: @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');\A 8: \A 9: // Setting Variables"; }
