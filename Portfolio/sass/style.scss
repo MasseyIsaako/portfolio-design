@@ -1,3 +1,556 @@
+<<<<<<< HEAD
+// Importing Mediaqueries
+@import "mediaqueries.scss";
+
+// Importing Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
+// Setting Variables
+$stretch:100%;
+$null:0px;
+$primary:#FFFFFF;
+$secondary:#333333;
+$accents:#062960;
+
+// Mixins
+
+// Setting background Image to Fixed
+@mixin backgroundIMG{
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+// Centering Text on screen
+@mixin centerText{
+	width:$stretch;
+	text-align:center;
+}
+
+// Setting fonts
+@mixin MontFont{font-family: 'Montserrat', sans-serif;}
+
+// Transition Timing
+@mixin timing{
+	transition:0.2s ease;
+}
+
+// Default
+body,html{
+	padding:$null;
+	margin:$null;
+}
+
+*{
+	float:left;
+	box-sizing:border-box;
+}
+
+a{
+	text-decoration:none;
+}
+
+// Main Container
+#wrapper{
+	@include backgroundIMG;
+	position:absolute;
+	width:$stretch;
+	height:auto;
+	background-image:url("../images/blue_sky.jpg");
+}
+
+// Navigation Styling
+#nav-container{
+	position:fixed;
+	width:$stretch;
+	height:75px;
+	background:none;
+	box-shadow:none;
+	padding:0px;
+	z-index:10;
+	@include MontFont;
+	@include timing;
+
+	i{
+		color:$primary;
+		font-size:15pt;
+		z-index:1;
+		margin-top:25px;
+		margin-right:20px;
+		float:right;
+	}
+
+	a{
+		color:$primary;
+		@include timing;
+
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+
+	#brand{
+		width:50px;
+		margin:10px 0px 10px 10px;
+		cursor:pointer;
+	}
+
+	#desktop-nav{
+		width:auto;
+		height:$stretch;
+		position:relative;
+		float:right;
+		margin-right:10px;
+		padding-top:7.5px;
+
+		ul{
+			text-decoration:none;
+			list-style-type:none;
+			padding:0px;
+			color:$primary;
+
+			li{
+				padding-left:100px;
+				padding-right:10px;
+				font-size:16px;
+			}
+		}
+	}
+
+	#mobile-nav{
+		cursor:pointer;
+	}
+
+	#mobile-links{
+		width:$stretch;
+		height:auto;
+		padding:5px;
+		position:relative;
+		margin:0px;
+		display:none;
+		background-color:rgba(0, 0, 0, 1);
+
+		ul{
+			text-decoration:none;
+			list-style-type:none;
+			padding:0px;
+			color:$primary;
+
+			li{
+				padding:10px;
+				padding-left:10px;
+				font-size:16px;
+				width:$stretch;
+			}
+			a{color:$primary;}
+		}
+	}
+}
+
+// Default Slides
+.slide{
+	width:100%;
+	height:auto;
+	@include MontFont;
+	background:none !important;
+	overflow-x:hidden;
+}
+
+// First Slide
+#home{
+	width:$stretch;
+	height:100vh;
+}
+
+
+#text-container{
+	display:block;
+	width:$stretch;
+	height:auto;
+	position:relative;
+	z-index:2;
+
+	h1{
+		color:$primary;
+		@include centerText;
+		margin-top:300px;
+		margin-bottom:$null;
+		font-size:70px;
+		font-weight:400;
+		letter-spacing:10px;
+		z-index:1;
+	}
+
+	h2{
+		font-size:20px;
+		@include centerText;
+		font-weight:300;
+		margin:0px;
+		color:$primary;
+	}
+
+	hr{
+		width:30%;
+		margin:10px 35%;
+		border: 0; 
+		height: 1px; 
+		background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+		background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+		background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+		background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	}
+
+	#resume{
+		@include timing;
+
+		a{
+			@include centerText;
+			font-weight:300;
+			color:$primary;
+		}
+
+		width:10%;
+		margin-left:45%;
+		height:auto;
+		padding:15px;
+		margin-top:50px;
+		font-weight:700;
+		font-size:12pt;
+		outline:none;
+		background:rgba(255,255,255,0);
+		border: solid 1px $primary;
+		border-radius:5px;
+
+		&:hover{
+			cursor:pointer;
+			background-color:$primary;
+			border-color:$secondary;
+		}
+
+		&:hover a{color:$secondary;}
+	}
+}
+
+// Scroll to next slide
+#next-slide{
+	position:relative;
+	width:$stretch;
+	height:auto;
+	background-color:none;
+	margin-top:50px;
+	padding:25px $null;
+
+	a{
+		float:none;
+		font-size:25px;
+	}
+
+	.fa{
+		@include centerText;
+		text-align:center;
+		width:5%;
+		margin:$null 47.5%;
+		color:$accents;
+	}
+}
+
+// Displays links to LinkedIn, Github, Gmail (using: mailto html)
+#extraLinksBTN{
+	@include timing;
+	position:fixed;
+	float:right;
+	bottom:$null;
+	right:$null;
+	width:50px;
+	height:50px;
+	background-color:$primary;
+	border:solid 1px $primary;
+	border-radius:5px;
+	z-index:3;
+	margin:10px;
+	cursor:pointer;
+
+	&:hover{border-color:#000;}
+
+	i{
+		font-size:20px;
+		margin-top:13px;
+		color:#000;
+		@include centerText;
+	}
+}
+
+#extraLinksTAB{
+	position:fixed;
+	bottom:$null;
+	right:$null;
+	width:$null;
+	width:200px;
+	margin:10px 70px;
+	height:50px;
+	background-color:rgb(255,255,255);
+	border-radius:5px;
+	border:solid 1px #000;
+	z-index:2;
+
+	i{cursor:pointer;}
+
+	a{
+		font-size:20px;
+		margin-top:13px;
+		color:#000;
+		text-align:center;
+		width:30%;
+		margin-left:3.33%;
+	}
+
+	.fa{
+		width:30%;
+		padding-left:20px;
+		text-align:center !important;
+	}
+}
+
+// Individual styling of slides using unique ID
+#profile{
+	padding:100px $null;
+	background-color:$primary !important;
+	color:$secondary;
+
+	h3, p{
+		@include centerText;
+		color:$secondary;
+	}
+
+	p{
+		font-size:16px;
+		width:80%;
+		margin-left:10%;
+		text-align:center;
+	}
+
+	.column{
+		width:23%;
+		margin:10px 5.16%;
+		padding:20px;
+		background-color:$primary;
+		border:2px solid $primary;
+		box-shadow:0px 0px 10px $secondary;
+		color:$primary;
+
+		i{
+			@include centerText;
+			font-size:150px;
+			color:$accents;
+		}
+
+		ul{
+			width:$stretch;
+			padding:$null;
+			color:$secondary;
+
+			li{
+				@include centerText;
+				list-style-type:none;
+				font-size:16px;
+			}
+		}
+	}
+}
+
+// Projects Container
+#projects{
+	height:auto;
+	padding:$null;
+	// background-color:$accents !important;
+	overflow-y:hidden;
+
+	a{
+		color:$primary;
+	}
+}
+
+#project-1{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+	background-position:bottom;
+}
+
+#project-2{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+	background-position:bottom;
+}
+
+#project-3{
+	background-image:url("../images/starry_night.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+	background-position:bottom;
+}
+
+
+.thumbnail-group{
+	@include MontFont;
+	position:relative;
+	border:2px solid $primary;
+	width:33.3%;
+	height:300px;
+	margin:$null;
+	color:$primary;
+
+	&:hover{
+		background-size:150%;
+	}
+
+	.fa{
+		top:-50px;
+		position:absolute;
+		color:$secondary;
+		transform:rotate(-25deg);
+	}
+
+	i{
+		@include centerText;
+		font-size:30px;
+	}
+
+	.overlay{
+		width:$stretch;
+		height:$stretch;
+		background-color:rgba(0,0,0,0);
+		opacity:0;
+		@include timing;
+
+		&:hover{
+			background-color:rgba(0,0,0,0.8);
+			opacity:1;
+		}
+
+		h3{
+			@include centerText;
+			margin-top:75px;
+		}
+
+		.open-modal{
+			position:absolute;
+			display:block;
+			left:50%;
+			top:65%;
+			transform:translate(-50%, -50%);
+			padding:10px 20px;
+			border:1px solid $primary;
+			background-color:rgba(0,0,0,0);
+			cursor:pointer;
+		}
+	}
+}
+
+#modal-fullscreen{
+	display:none;
+	position:fixed;
+	z-index:15;
+	width:$stretch;
+	height:$stretch;
+	background-color:rgba(0,0,0,0.9);
+
+	hr{
+		border-color:black !important;
+		width:60%;
+		margin:$null 20%;
+	}
+
+	#modal-container{
+		position:absolute;
+		width:50%;
+		height:90%;
+		margin-left:25%;
+		margin-top:2.5%;
+		background-color:$primary;
+		z-index:16;
+
+		#close-container{
+			width:$stretch;
+			position:absolute;
+			height:auto;
+			padding:10px;
+			background-color:$secondary;
+			z-index:2;
+
+			#closeModal{
+				@include centerText;
+				@include MontFont;
+				cursor:pointer;
+				color:$primary;
+			}
+		}
+
+		#modal-content{
+			@include MontFont;
+			position:absolute;
+			margin-top:39px;
+			width:$stretch;
+			height:94%;
+			padding:10px 30px;
+			overflow-y:scroll;
+			overflow-x:hidden;
+
+			h1, h3{
+				@include centerText;
+				margin-top:20px;
+			}
+
+			#img-box{
+				position:relative;
+				background:$primary;
+				margin-left:50%;
+				margin-top:20px;
+				transform:translate(-50%, 0%);
+				width:auto;
+				height:auto;
+
+				img{
+					height:100%;
+					width:100%;
+				}
+			}
+
+			p{
+				@include centerText;
+				@include MontFont;
+				position:relative;
+				margin-top:$null;
+			}
+
+			a{
+				position:relative;
+				margin-top:$null;
+				color:$primary;
+			}
+
+			.project-url{
+				position:relative;
+				cursor:pointer;
+				font-size:20px;
+				font-weight:300;
+				padding:10px 12.5px;
+				background-color:$secondary;
+				width:30%;
+				margin:10px 35%;
+				text-align:center;
+				border-radius:5px;
+			}
+		}
+	}
+}
+
+.blue{background:blue;}
+
+// greg rakozy
+=======
 // Importing Mediaqueries
 @import "mediaqueries.scss";
 
@@ -548,4 +1101,5 @@ a{
 .blue{background:blue;}
 
 // greg rakozy
+>>>>>>> 6542b419657494dd54e24561dac1fb064ca44ef3
 // http://grakozy.com/
