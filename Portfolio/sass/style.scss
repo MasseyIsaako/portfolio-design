@@ -4,36 +4,6 @@
 // Importing Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
-// Setting Variables
-$stretch:100%;
-$null:0px;
-$primary:#FFFFFF;
-$secondary:#333333;
-$accents:#062960;
-
-// Mixins
-// Setting background Image to Fixed
-@mixin backgroundIMG{
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:center;
-	background-attachment:fixed;
-}
-
-// Centering Text on screen
-@mixin centerText{
-	width:$stretch;
-	text-align:center;
-}
-
-// Setting fonts
-@mixin MontFont{font-family: 'Montserrat', sans-serif;}
-
-// Transition Timing
-@mixin timing{
-	transition:0.2s ease;
-}
-
 // Default
 body,html{
 	padding:$null;
@@ -127,13 +97,14 @@ a{
 		position:relative;
 		margin:0px;
 		display:none;
-		background-color:rgba(0, 0, 0, 1);
+		background-color:rgba(255, 255, 255, 1);
+		box-shadow:0px 5px 5px $secondary;
 
 		ul{
 			text-decoration:none;
 			list-style-type:none;
 			padding:0px;
-			color:$primary;
+			color:$secondary;
 
 			li{
 				padding:10px;
@@ -141,7 +112,8 @@ a{
 				font-size:16px;
 				width:$stretch;
 			}
-			a{color:$primary;}
+
+			a{color:$secondary !important;}
 		}
 	}
 }
@@ -200,20 +172,17 @@ a{
 	}
 
 	#resume{
-		@include timing;
-
 		a{
 			@include centerText;
 			font-weight:300;
 			color:$primary;
 		}
 
+		@include timing;
 		width:10%;
-		margin-left:45%;
+		margin:50px 45% $null 45%;
 		height:auto;
 		padding:15px;
-		margin-top:50px;
-		font-weight:700;
 		font-size:12pt;
 		outline:none;
 		background:rgba(255,255,255,0);
@@ -316,10 +285,11 @@ a{
 	background-color:$primary !important;
 	color:$secondary;
 
-	h3, p{
-		@include centerText;
-		color:$secondary;
-	}
+	h3, p{@include centerText;}
+
+	h3{color:$lightBlue;}
+
+	p{color:$secondary;}
 
 	p{
 		font-size:16px;
@@ -400,17 +370,6 @@ a{
 	margin:$null;
 	color:$primary;
 
-	&:hover{
-		background-size:150%;
-	}
-
-	.fa{
-		top:-50px;
-		position:absolute;
-		color:$secondary;
-		transform:rotate(-25deg);
-	}
-
 	i{
 		@include centerText;
 		font-size:30px;
@@ -422,6 +381,7 @@ a{
 		background-color:rgba(0,0,0,0);
 		opacity:0;
 		@include timing;
+		padding:20px;
 
 		&:hover{
 			background-color:rgba(0,0,0,0.8);
@@ -516,8 +476,10 @@ a{
 			}
 
 			p{
-				@include centerText;
 				@include MontFont;
+				text-align:justify;
+				width:80%;
+				margin:10px 10%;
 				position:relative;
 				margin-top:$null;
 			}

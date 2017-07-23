@@ -16,7 +16,7 @@ var projectInfo = [
 		text: "Whitcoulls was testing the feasibility of a new service that connects"+
 		" owners with borrowers.<br><br>Owners of books can list"+
 		" them online for borrowers to access. Borrowers browse and"+
-		" search for items.<br><br>Users will rate each other as"+
+		" search for items.<br><br>Users needed the ability to rate each other as"+
 		" a method of maintaining positive interactions and"+
 		" encouraging a healthy and vibrant online community.<br><br>"+
 		" The service can be accessed in browsers from desktops,"+
@@ -37,8 +37,6 @@ var projectInfo = [
 ];
 
 $(document).ready(function(){
-
-});
 	// Setting some global variables
 	var navContainer = $("#nav-container");
 	var navOpen = false;
@@ -157,12 +155,12 @@ $(document).ready(function(){
 			}
 		}
 
-		console.log(link.href);
-
 		image.src = "images/wellington-waterfront.png";
 		modal.fadeIn("fast");
 	});
 
+	// Closing the popup modal
 	$("#closeModal").click(function(){
 		modal.fadeOut("fast");
 	});
+});
