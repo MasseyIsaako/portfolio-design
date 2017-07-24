@@ -339,22 +339,23 @@ a{
 	}
 }
 
+// Wellington Waterfront Link:
 #project-1{
-	background-image:url("../images/starry_night.jpg");
+	background-image:url("https://massey.isaako.yoobee.net.nz/Module_1/uxsummative_libraria/images/homeimg.jpg");
 	@include backgroundIMG;
 	background-attachment:scroll;
 	background-position:bottom;
 }
 
 #project-2{
-	background-image:url("../images/starry_night.jpg");
+	background-image:url("https://cdn.pixabay.com/photo/2016/08/22/10/04/traveler-1611614_960_720.jpg");
 	@include backgroundIMG;
 	background-attachment:scroll;
 	background-position:bottom;
 }
 
 #project-3{
-	background-image:url("../images/starry_night.jpg");
+	background-image:url("https://massey.isaako.yoobee.net.nz/Module_1/formative_3/images/home.jpg");
 	@include backgroundIMG;
 	background-attachment:scroll;
 	background-position:bottom;

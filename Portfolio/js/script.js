@@ -155,7 +155,7 @@ $(document).ready(function(){
 			}
 		}
 
-		image.src = "images/wellington-waterfront.png";
+		image.src = "images/wellington-waterfront-mac.png";
 		modal.fadeIn("fast");
 	});
 
