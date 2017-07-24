@@ -47,6 +47,7 @@ $(document).ready(function(){
 	var extraClick = false;
 	var thumbnail = $(".open-modal");
 	var modal = $("#modal-fullscreen");
+	var logo = $("#brand");
 	tabLinks.hide();
 
 	// This is the heading fade in effect the user sees once the page is open
@@ -98,8 +99,8 @@ $(document).ready(function(){
 			navContainer.css("box-shadow", "none");
 
 			$(".scrollChangeLink").css("color", "#fff");
-			$(".mobileScroller").css("color", "#FFF");
-			$("#brand").attr("src", "images/brandWhite.png"); 	
+			$(".mobileScroller").css("color", "#FFF"); 
+			logo.attr("src", "images/brandWhite.png"); 	
 		}
 	});
 
@@ -160,4 +161,10 @@ $(document).ready(function(){
 	$("#closeModal").click(function(){
 		modal.fadeOut("fast");
 	});
+
+	modal.click(function(){
+		modal.fadeOut("fast");
+	});
+
+
 });

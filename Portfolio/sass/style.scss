@@ -50,12 +50,10 @@ a{
 	}
 
 	a{
-		color:$primary;
 		@include timing;
+		color:$primary;
 
-		&:hover{
-			color:$accents !important;
-		}
+		&:hover{color:$lightBlue !important;}
 	}
 
 	#brand{
@@ -209,6 +207,8 @@ a{
 	a{
 		float:none;
 		font-size:30px;
+
+		&:hover{font-size:35px;}
 	}
 
 	.fa{
@@ -349,7 +349,7 @@ a{
 }
 
 #project-2{
-	background-image:url("https://cdn.pixabay.com/photo/2016/08/22/10/04/traveler-1611614_960_720.jpg");
+	background-image:url("https://cdn.pixabay.com/photo/2013/03/14/10/33/lighthouse-93487_960_720.jpg");
 	@include backgroundIMG;
 	background-attachment:scroll;
 	background-position:bottom;
