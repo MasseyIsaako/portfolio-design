@@ -1,18 +1,19 @@
 var projectInfo = [
 	{
 		name: "Wellington Waterfront",
-		image: "",
+		image: "images/wellington-waterfront-mac.png",
 		text: "Wellington city contains a variety of unique and"+
 		" interesting places and spaces. Each with its own"+
 		" community and culture, history, traditions, symbols,"+
 		" language, values and beliefs.<br><br>We needed to design a"+
 		" responsive website for an existing space in Wellington city where users"+
-		" can see what it is about. ",
+		" can see what it is about.<br><br>Note:<br><i>This was created in collaboration with"+
+		" Kirsty Opie and Amy Soden.</i>",
 		url: "https://massey.isaako.yoobee.net.nz/Module_1/formative_3/index.html"
 	},
 	{
 		name: "Whitcoulls Libraria",
-		image: "",
+		image: "images/whitcoulls-libraria-mac.png",
 		text: "Whitcoulls was testing the feasibility of a new service that connects"+
 		" owners with borrowers.<br><br>Owners of books can list"+
 		" them online for borrowers to access. Borrowers browse and"+
@@ -20,12 +21,12 @@ var projectInfo = [
 		" a method of maintaining positive interactions and"+
 		" encouraging a healthy and vibrant online community.<br><br>"+
 		" The service can be accessed in browsers from desktops,"+
-		" tablets and phones.<br><br><i>Note: Listing items and browsing is not functional</i>",
+		" tablets and phones.<br><br>Note:<br><i>Listing and browsing is not functional.",
 		url: "https://massey.isaako.yoobee.net.nz/Module_1/uxsummative_libraria/index.html"
 	},
 	{
 		name: "Traverse",
-		image: "",
+		image: "images/tnz-traverse-iphone.png",
 		text: "Tourism New Zealand works with the tourism industry"+
 		" to positively promote New Zealand internationally. They have"+
 		" initiated a new campaign aimed at tourists visiting for short"+
@@ -88,18 +89,14 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();		
 		if (scroll > ($("#home").height() - 75)) {
-			// Changing background color to white when scroll_start = 0 (When scrolling away)
-			navContainer.css({"background-color": "rgb(255,255,255)", "box-shadow": "0px 0px 10px #333"});
-			// navContainer.css("box-shadow", "0px 0px 10px #333;");
-			$(".fa-bars").css("color", "#000");
-			$(".scrollChangeLink").css("color", "#000");
-			$(".mobileScroller").css("color", "#FFF");
-			$("#brand").attr("src", "images/brandBlack.png");
+			// Changing background to image when scroll_start = 0 (When scrolling away)
+			navContainer.css({"background-image": "url(images/nav-bg.png)"});
 		} else{
 			// Changing background color to black when scroll_start > 0 (When on origin)
+			navContainer.css("background", "none");
 			navContainer.css("background-color", "rgba(0,0,0,0)");
 			navContainer.css("box-shadow", "none");
-			$(".fa-bars").css("color", "#FFF");
+
 			$(".scrollChangeLink").css("color", "#fff");
 			$(".mobileScroller").css("color", "#FFF");
 			$("#brand").attr("src", "images/brandWhite.png"); 	
@@ -111,15 +108,15 @@ $(document).ready(function(){
 		var scroll = $(window).scrollTop();		
 		if (scroll > (extraLinksBTN.height() - 10)) {
 			// Changing background color to white when scroll_start = 0 (When scrolling away)
-			extraLinksBTN.css("background-color", "rgb(0,0,0)");
+			extraLinksBTN.css("background-color", "rgb(22, 152, 172)");
 			openTAB.css("color", "#FFF");
 			$(".contactMe").css("color", "#FFF");
-			$("#extraLinksTAB").css("background-color", "#000");
+			$("#extraLinksTAB").css("background-color", "rgb(22, 152, 172)");
 		} else{
 			// Changing background color to black when scroll_start > 0 (When on origin)
 			extraLinksBTN.css("background-color", "rgb(255,255,255)");
-			openTAB.css("color", "#000");
-			$(".contactMe").css("color", "#000");
+			openTAB.css("color", "rgb(22, 152, 172)");
+			$(".contactMe").css("color", "rgb(22, 152, 172)");
 			$("#extraLinksTAB").css("background-color", "#FFF");
 		}
 	});
@@ -152,10 +149,10 @@ $(document).ready(function(){
 				headingText.innerText = projectInfo[i].name;
 				bodyText.innerHTML = projectInfo[i].text;
 				link.href = projectInfo[i].url;
+				image.src = projectInfo[i].image;
 			}
 		}
 
-		image.src = "images/wellington-waterfront-mac.png";
 		modal.fadeIn("fast");
 	});
 
