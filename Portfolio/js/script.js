@@ -9,6 +9,7 @@ var projectInfo = [
 		" responsive website for an existing space in Wellington city where users"+
 		" can see what it is about.<br><br>Note:<br><i>This was created in collaboration with"+
 		" Kirsty Opie and Amy Soden.</i>",
+		doc: "",
 		url: "https://massey.isaako.yoobee.net.nz/Module_1/formative_3/index.html"
 	},
 	{
@@ -22,6 +23,7 @@ var projectInfo = [
 		" encouraging a healthy and vibrant online community.<br><br>"+
 		" The service can be accessed in browsers from desktops,"+
 		" tablets and phones.<br><br>Note:<br><i>Listing and browsing is not functional.",
+		doc: "pdf_docs/libraria-documentation.pdf",
 		url: "https://massey.isaako.yoobee.net.nz/Module_1/uxsummative_libraria/index.html"
 	},
 	{
@@ -33,6 +35,7 @@ var projectInfo = [
 		" periods of time.<br><br>This is a single page web application"+
 		" allowing users to input information and provide meanigful feedback"+
 		" based on their input.",
+		doc: "pdf_docs/traverse-documentation.pdf",
 		url: "https://masseyisaako.github.io/Tourism-App/"
 	}
 ];
@@ -143,14 +146,25 @@ $(document).ready(function(){
 		var headingText = $("#modal-content")[0].childNodes[1];
 		var bodyText = $("#modal-body-text")[0];
 		var image = $("#modal-content")[0].childNodes[5].childNodes[0];
+		var documentation = $("#documentation-link")[0];
 		var link = $("#live-site-link")[0];
 
 		for (var i = 0; i < projectInfo.length; i++) {
 			if(selection === projectInfo[i].name){
 				headingText.innerText = projectInfo[i].name;
+				image.src = projectInfo[i].image;
 				bodyText.innerHTML = projectInfo[i].text;
 				link.href = projectInfo[i].url;
-				image.src = projectInfo[i].image;
+
+				if(projectInfo[i].doc === ""){
+					documentation.innerText = "";
+					$("#nodoc")[0].innerText = "No documentation available";
+					console.log($("#nodoc")[0]);
+				} else if(projectInfo[i] !== ""){
+					$("#nodoc")[0].innerText = "";
+					documentation.innerText = "View Documentation.";
+					documentation.href = projectInfo[i].doc;
+				}
 			}
 		}
 
@@ -161,10 +175,4 @@ $(document).ready(function(){
 	$("#closeModal").click(function(){
 		modal.fadeOut("fast");
 	});
-
-	modal.click(function(){
-		modal.fadeOut("fast");
-	});
-
-
 });

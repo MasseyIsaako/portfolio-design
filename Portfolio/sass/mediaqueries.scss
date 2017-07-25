@@ -1,5 +1,5 @@
 // Setting Variables
-$stretch:100%;
+$full:100%;
 $null:0px;
 $primary:#FFFFFF;
 $secondary:#333333;
@@ -17,7 +17,7 @@ $lightBlue:#5ac9d2;
 
 // Centering Text on screen
 @mixin centerText{
-	width:$stretch;
+	width:$full;
 	text-align:center;
 }
 
@@ -143,6 +143,8 @@ $lightBlue:#5ac9d2;
 				h3{font-size:16px !important;}
 
 				p{font-size:14px !important;}
+
+				#nodoc, #documentation-link{font-size:14px !important;}
 
 				.project-url{
 					width:50% !important;
