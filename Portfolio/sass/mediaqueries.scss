@@ -82,6 +82,10 @@ $lightBlue:#5ac9d2;
 			margin-top:5% !important;
 		}
 	}
+
+	#footer{
+		h1{font-size:18px !important;}
+	}
 }
 
 // Mobile Screen Sizing
@@ -153,5 +157,9 @@ $lightBlue:#5ac9d2;
 				}
 			}
 		}
+	}
+
+	#footer{
+		h1{font-size:16px !important;}
 	}
 }
