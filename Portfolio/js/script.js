@@ -37,6 +37,16 @@ var projectInfo = [
 		" based on their input.",
 		doc: "pdf_docs/traverse-documentation.pdf",
 		url: "https://masseyisaako.github.io/Tourism-App/"
+	},
+	{
+		name: "Student Clashboard",
+		image: "images/clashboard-mac.png",
+		text: "We were tasked with creating a data visualisation dashboard, "+
+		"One that effectively showcased the demographic of the Yoobee Web and UX "+
+		"class. <br><br> This data visualisation is interactive and simple to use but "+
+		"it is a non responsive interface, so it is limited to the use of a standard pc sized screen.",
+		doc: "",
+		url: "https://masseyisaako.github.io/student-clashboard/index.html"
 	}
 ];
 
@@ -172,7 +182,7 @@ $(document).ready(function(){
 	});
 
 	// Closing the popup modal
-	$("#closeModal").click(function(){
+	$("#close-container").click(function(){
 		modal.fadeOut("fast");
 	});
 });

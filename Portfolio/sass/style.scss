@@ -363,13 +363,21 @@ a{
 	background-position:right;
 }
 
+//https://pixabay.com/en/books-student-study-education-1012088/
+#project-4{
+	background-image:url("../images/clashboard-cover.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+	background-position:right;
+}
+
 
 .thumbnail-group{
 	@include MontFont;
 	position:relative;
 	border:2px solid $primary;
-	width:33.3%;
-	height:300px;
+	width:25%;
+	height:350px;
 	margin:$null;
 	color:$primary;
 
@@ -409,9 +417,9 @@ a{
 			border-radius:5px;
 
 			&:hover{
-				background-color:$primary;
-				color:$secondary;
-				border-color:$secondary;
+				// border-left:1px solid $primary;
+				// border-right:1px solid $primary;
+				box-shadow:0px 1px 0px 1px $primary;
 			}
 		}
 	}
@@ -426,6 +434,10 @@ a{
 
 	#blue-overlay-colour{
 		background:-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 69, 179, 1));
+	}
+
+	#grey-overlay-colour{
+		background:-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(200, 200, 200, 1));
 	}
 
 }
