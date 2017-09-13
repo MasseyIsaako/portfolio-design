@@ -169,7 +169,6 @@ $(document).ready(function(){
 				if(projectInfo[i].doc === ""){
 					documentation.innerText = "";
 					$("#nodoc")[0].innerText = "No documentation available";
-					console.log($("#nodoc")[0]);
 				} else if(projectInfo[i] !== ""){
 					$("#nodoc")[0].innerText = "";
 					documentation.innerText = "View Documentation.";

@@ -415,10 +415,9 @@ a{
 			background:none;
 			cursor:pointer;
 			border-radius:5px;
+			text-align:center;
 
 			&:hover{
-				// border-left:1px solid $primary;
-				// border-right:1px solid $primary;
 				box-shadow:0px 1px 0px 1px $primary;
 			}
 		}
