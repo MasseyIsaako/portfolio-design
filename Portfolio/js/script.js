@@ -47,6 +47,18 @@ var projectInfo = [
 		"it is a non responsive interface, so it is limited to the use of a standard pc sized screen.",
 		doc: "",
 		url: "https://masseyisaako.github.io/student-clashboard/index.html"
+	},
+	{
+		name: "0800 What's Up",
+		image: "images/whatsup.png",
+		text: "This project required me to create a website that increased "+
+		"awareness of users regarding the cause of a non-profit organisation. "+
+		"This website had to be designed in a way that educated and engaged users, "+
+		"and allowed administrators to create, update and delete content as they see fit."+
+		"<br><br> The website needed to be accessible on a range of browsers and "+
+		"devices.",
+		doc: "",
+		url: "http://whatsup.massey.isaako.yoobee.net.nz"
 	}
 ];
 

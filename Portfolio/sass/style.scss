@@ -371,13 +371,21 @@ a{
 	background-position:right;
 }
 
+//https://pixabay.com/en/books-student-study-education-1012088/
+#project-5{
+	background-image:url("../images/whatsup-cover.jpg");
+	@include backgroundIMG;
+	background-attachment:scroll;
+	background-position:center;
+}
+
 
 .thumbnail-group{
 	@include MontFont;
 	position:relative;
 	border:2px solid $primary;
-	width:25%;
-	height:350px;
+	width:33%;
+	height:375px;
 	margin:$null;
 	color:$primary;
 
@@ -437,6 +445,10 @@ a{
 
 	#grey-overlay-colour{
 		background:-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(200, 200, 200, 1));
+	}
+
+	#purple-overlay-colour{
+		background:-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(191,0,255,0.75));
 	}
 
 }
